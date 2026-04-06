@@ -18,7 +18,7 @@ impl Filter for ErlangGenAGent {
 
         let code = erlanggen::generate(tree);
 
-        tracing::info!(source_lang = %source_lang, "generated erlang code");
+        tracing::info!(source_lang = %source_lang, code = %code, "generated erlang code");
 
         Ok(json!([{
             "type": "code",
